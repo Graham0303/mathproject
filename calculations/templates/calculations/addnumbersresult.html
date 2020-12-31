@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adding Two Numbers</title>
+    <link rel="stylesheet" href="{% static 'css/addnumbers.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formview">
+            <div class="banner">
+                ADD TWO NUMBERS
+            </div>
+            <div class="content">
+                    <div class="forminput">
+                        Answer = {{ result }}
+                    </div>                   
+                    <div class="forminput">
+                        <a href="{% url 'addnumbers' %}"> add again </a>
+                    </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

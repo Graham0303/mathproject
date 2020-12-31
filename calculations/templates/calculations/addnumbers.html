@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Adding Two Numbers</title>
+    <link rel="stylesheet" href="{% static 'css/addnumbers.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <div class="formview">
+            <div class="banner">
+                ADD TWO NUMBERS
+            </div>
+            <div class="content">
+                <form action="/addnumbersresult/" method="GET">
+                    {% csrf_token %}
+                    <div class="forminput">
+                        <label for="value_a">A=</label>
+                        <input type="text" name="value_a" id="value_a">
+                    </div>
+                    <div  class="forminput">
+                        <label for="value_b">B=</label>
+                        <input type="text" name="value_b" id="value_b">
+                    </div>                    
+                    <div class="forminput">
+                        <button type="submit" name="button_add" id="button_add">Add</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
